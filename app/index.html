@@ -5,14 +5,25 @@
 <title>Tycoon - Angular App</title>
 <link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body ng-app="tycoons-app">
-<div ng-controller="helloWorldCtrl">
-      <div class="container">
-        <h1>{{name}}</h1>        
+<body ng-app="tycoonsApp">
+	
+    <header-Menu></header-Menu>
+	
+    <!-- Main component for a primary marketing message or call to action -->
+    <div class="container">
+      <div class="jumbotron">
+      		<!-- main  view ------>
+	       <div ng-view></div>
+           <div my-dom-directive>Click Me!</div>
       </div>
-</div>
-
+    </div> <!-- /container -->
+    
+    <div footer-Block></div>
+	
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular-route.min.js"></script>
 <script src="js/app.js"></script>
+<script src="js/controllers.js"></script>
+<script src="js/directives.js"></script>
 </body>
 </html>
